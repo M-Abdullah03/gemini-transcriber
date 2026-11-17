@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Live Transcriber",
+  "version": "1.1.0",
+  "description": "Transcribes all Mac system audio in realtime with local Whisper and shows it above the Gemini prompt box.",
+  "minimum_chrome_version": "116",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArI9+kBBwDi3QW+gneM9upo588jGwidCmhTOppYsVfOO/S0sTAzXrimVUdVCB13t1GF3u1KDEJ+vZp1C4verv5mbUA8/ES/bc0BFBtbYro0eP8ZG66Qje/5G0/8u6yNcaFnbY3HpTZoh3mGhyRQ7STrz2mHKQJvZIHJn4gs6nRbNj9u6BNFQK8aXPnwt3I/bN5R7jVW3om3V5YpQd1lApDMPFTdQQiAmRI0LrgZfj1vJAKx4oVmlkAl1tnbnnggdkVzNWkzB/OrAN95PhRByx4SImuG1b0nc9kNAZ3WEysCx27LgSfeHVW+ZRdWaT68mOtqk6hrlUv9H2MwZJb8ZRcwIDAQAB",
+  "permissions": [
+    "nativeMessaging"
+  ]
+}

@@ -1,0 +1,7 @@
+# Build output (install.sh builds the helper into ~/Library/Application Support)
+systap/systap
+__pycache__/
+*.pyc
+.DS_Store
+# Never commit an extension private key
+*.pem
